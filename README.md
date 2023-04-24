@@ -49,3 +49,13 @@ This package contain the class "GetFromAPIws". The main rôle of this class is t
  And test_API.php do request to "https://api.insee.fr/entreprises/sirene/V3/siret/" . Why should we use this test_API.php file ????
 We use it to avoid HTTPS SSL error in JAVA SPRING 
 </p>
+
+
+<h2> Unit TEST</h2>
+<p>Unit test are located in src/test 
+You can launch "SiretmicroserviceBackendApplicationTests" class , it will test all service and controllers method in class.</p>
+
+<h2> NB</h2>
+<p>
+All variable/Class/Package/Methods name are made to FACILITATE readability and the role of them.
+</p>
