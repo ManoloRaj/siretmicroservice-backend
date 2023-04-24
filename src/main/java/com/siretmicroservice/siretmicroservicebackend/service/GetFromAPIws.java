@@ -13,8 +13,8 @@ import java.util.ArrayList;
 public class GetFromAPIws {
     private RestTemplate restTemplate = new RestTemplate();
 
-    //I get API informations from php API that I create (in cloud) to avoid HTTPS SSL error
-    //The php
+    //I get API informations from php API that I create (in cloud) to avoid HTTPS SSL error in JAVA SPRING
+    //The php file "test_API.php" should be store in local apache server (Wamp or Xamp...)
     private String url = "http://localhost/test_API.php";
 
     //Get all the information and return a STRING

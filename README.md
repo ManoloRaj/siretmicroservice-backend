@@ -3,7 +3,7 @@ This an implementation of JAVA microservice. That get pertinente companies infor
 
 <h2> How to launch the application ? </h2>
 
-<li>Clone or download this repository</li>
+<li>Clone or download this repository in https://github.com/ManoloRaj/siretmicroservice-backend</li>
 <li>Open it on your JAVA IDE (I used IntelliJ)</li>
 <li>Then Debug/Run the application </li>
 
@@ -12,14 +12,40 @@ This an implementation of JAVA microservice. That get pertinente companies infor
 The project was developped in IntelliJ IDE and structured by Maven project structure 
 </p>
 <p>
-There are 3 packages : 
-<li>
-"controller" package : 
+There are 3 packages :
+
+
+<h3>"controller" package : take user requests, there are 4 routes:</h3>
+<li>test: just for a test</li>
+<li>getOneEtablissement: returns the complete characteristic of a company</li>
+
+<li>getSpecificInformations: returns the following characteristics in a string:
+	
+-siret
+-nic
+-full address
+-creation date
+-Full name 
 </li>
-<li>
-"model" package : 
-</li>
-<li>
+
+<li>saveSpecificInformations : Save the information in CSV file</li>
+
+
+<h3>
+"model" package : </h3>
+
+<p>
+This package contains a kind of "Entity" to map information from API
+here is an image of UML Diagram (You can download it !!!)
+</p>
+<img src="Documentation/UML.png" width="500px" height="500px"/>
+
+
+<h3>
 "service" package : 
-</li>
+</h3>
+<p>
+This package contain the class "GetFromAPIws". The main rôle of this class is to do API request to a file  : "test_API.php".</br>
+ And test_API.php do request to "https://api.insee.fr/entreprises/sirene/V3/siret/" . Why should we use this test_API.php file ????
+We use it to avoid HTTPS SSL error in JAVA SPRING 
 </p>
